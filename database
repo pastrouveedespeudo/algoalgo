@@ -1,4 +1,14 @@
-dico = {'affichage':'print'}
+
+#affichage
+LISTE_AFFICHAGE = ['montre', 'affiche',]
+AFFICHAGE = {'debut':'print(', 'fin':')'}
+MOT_INGNORE = ['moi']
+
+
+#construction fonction
+
+FONCTION = {'debut':'', 'fin':''}
+
 
 
 
