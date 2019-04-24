@@ -23,7 +23,9 @@ class entree:
         liste = [i for i in LISTE_AFFICHAGE for j in para if i == j]
         if liste:
             dico = [valeur for cle, valeur in AFFICHAGE.items()]
-            return dico, para[1:]
+            mot = "'" + para[1:][0] + "'"
+     
+            return dico, mot
 
     def nombre_para(self):
         return 1
