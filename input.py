@@ -24,8 +24,8 @@ class entree:
         if liste:
             dico = [valeur for cle, valeur in AFFICHAGE.items()]
             mot = "'" + para[1:][0] + "'"
-     
-            return dico, mot
+
+            return dico, mot, False
 
     def nombre_para(self):
         return 1
@@ -87,8 +87,23 @@ class entree:
 
 
 
-    def parametre(self):
-        pass
+    def parametrage(self, parametre, para_ou_non):
+
+        if para_ou_non == False:
+            return ""
+        else:
+
+            parametres = ''
+            nom = 'para'
+            compteur = 0
+            for i in range(parametre):
+                name = nom + str(compteur)
+                
+                parametres += name
+                
+                compteur += 1
+                
+            return parametres
 
 
 
@@ -100,7 +115,14 @@ class entree:
 
 
 
-
+##
+##def the_function():
+##
+##    for i in range(10):
+##        print(5*i)
+##
+##
+##the_function()
 
 
 
