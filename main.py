@@ -66,15 +66,16 @@ if __name__ == "__main__":
 
 
     main.écriture_fonction(a[0])
-    main.écriture(parametres)
+    #main.écriture(parametres)
     main.écriture_fonction(a[1])
 
     main.écriture_l2(b[0][0])
-    main.écriture(parametres)
+    #main.écriture(parametres)
+    main.écriture(b[1])
     main.écriture(b[0][1])
 
     main.reload(écriture)
-    écriture.the_function('bonjour')
+    écriture.the_function()
     
 
 
