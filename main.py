@@ -1,5 +1,5 @@
 from input import entree
-
+import écriture
 
 class main:
     def entrée(self):
@@ -45,7 +45,8 @@ class main:
             
         return parametres
         
-
+    def reload(self, para):
+        entree.reload(self, para)
     
 if __name__ == "__main__":
 
@@ -72,8 +73,8 @@ if __name__ == "__main__":
     main.écriture(parametres)
     main.écriture(b[0][1])
 
-
-
+    main.reload(écriture)
+    écriture.the_function('bonjour')
     
 
 
