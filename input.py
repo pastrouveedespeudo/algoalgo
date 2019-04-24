@@ -1,3 +1,5 @@
+import importlib
+import écriture
 from database import AFFICHAGE, LISTE_AFFICHAGE
 
 
@@ -28,7 +30,7 @@ class entree:
  
 
     def fonction(self):
-        corps_debut = 'def function('
+        corps_debut = 'def the_function('
         corps_fin = '):'
 
         return corps_debut, corps_fin
@@ -37,12 +39,12 @@ class entree:
     def écriture_fonction(self, para):
         with open('écriture.py', 'a') as file:
             file.write(str(para))
-
+        
 
     def écriture(self, para):
         with open('écriture.py', 'a') as file:
             file.write(str(para))
-
+  
             
     def écriture_ligne2(self, para):
         with open('écriture.py', 'a') as file:
@@ -88,7 +90,9 @@ class entree:
 
 
 
-
+    def reload(self, para):
+        self.para = para
+        importlib.reload(self.para)
 
 
 
