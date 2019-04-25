@@ -1,6 +1,13 @@
 import importlib
 import écriture
-from database import AFFICHAGE, LISTE_AFFICHAGE
+
+from database import AFFICHAGE
+from database import LISTE_AFFICHAGE
+
+from database import LISTE_TABLE_MULITPLICATION
+from database import TABLE_MULITPLICATION
+
+from database import BOUCLE_FOR
 
 
 
@@ -10,6 +17,8 @@ class entree:
         #affiche bonjour
         #affiche la table de 5
         #affiche 5 + 5
+        print('affiche la table de multiplication de 5')
+        print('affiche moi la définition de cailloux')
         Oinput = input('affiche bonjour')
         return Oinput
 
@@ -20,12 +29,62 @@ class entree:
 
     def recherche_mot_clé(self, para):
 
-        liste = [i for i in LISTE_AFFICHAGE for j in para if i == j]
-        if liste:
-            dico = [valeur for cle, valeur in AFFICHAGE.items()]
-            mot = "'" + para[1:][0] + "'"
+        LA_LISTE = []
 
-            return dico, mot, False
+        affichage = [i for i in LISTE_AFFICHAGE for j in para if i == j]
+
+        c = 0
+        affichage2 = []
+        for i in para:
+            for j in affichage:
+                if i == j:
+                    affichage2.append(c)
+                    break
+            c+=1
+
+        if affichage:
+            dico = [valeur for cle, valeur in AFFICHAGE.items()]
+            nb = len(affichage2)
+            LA_LISTE.append(('affichage', dico, nb, para[affichage2[0]:],affichage2))
+
+            
+    
+        mul = ' '.join(para)
+        injonction = []
+        
+        for i in LISTE_TABLE_MULITPLICATION:
+            find_mot = str(mul).find(str(i))
+            
+            if find_mot >= 0:
+                
+                nouveau_mul = mul[find_mot:int(find_mot) + int(len(i))]
+                nouveau_mul = nouveau_mul.replace(' ','')
+                mul2 = mul[:find_mot] + nouveau_mul + mul[int(find_mot) + int(len(i)):]
+                       
+                mul2 = mul2.split()
+                index = mul2.index(nouveau_mul)
+
+                integer = []
+                for j in mul2:
+                    try:
+                        j = int(j)
+                        if j == int(j):
+                            integer.append(j)
+                    except:
+                        pass
+                    
+
+                LA_LISTE.append(('multiplication', TABLE_MULITPLICATION, integer, index))
+    
+
+
+
+
+        return LA_LISTE
+
+
+
+
 
     def nombre_para(self):
         return 1
@@ -115,7 +174,7 @@ class entree:
 
 
 
-##
+
 ##def the_function():
 ##
 ##    for i in range(10):
@@ -123,8 +182,10 @@ class entree:
 ##
 ##
 ##the_function()
-
-
+##
+##
+##def the_function():
+##    print('bonjour')
 
 
 
