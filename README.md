@@ -1,6 +1,6 @@
 # algoalgo
 
-par conte y'a 60 pm a lyon c pas l'heure de pointe.... PUTIN et y pleut et le vent est FAIBLE taleur il etait tres fort ca doit etre pour ca
+par conte y'a 60 pm a lyon c pas l'heure de pointe.... PUTIN et y pleut et le vent est FAIBLE taleur il etait tres fort ca doit etre pour ca stp dis moi que ca va baisser
 
 mettre une fonction qui efface ecriture
 
