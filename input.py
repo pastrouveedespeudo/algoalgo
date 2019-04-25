@@ -113,6 +113,12 @@ class entree:
             file.write('    ')
             file.write(para)
 
+    def écriture_ligne3_indentation(self, para):
+        with open('écriture.py', 'a') as file:
+            file.write('\n')
+            file.write('        ')
+            file.write(para)
+            
 
     def traitement(self, para):
         splitage = para.split()
