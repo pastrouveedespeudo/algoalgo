@@ -1,5 +1,6 @@
 # algoalgo
 
+j'aurai du continuer mes études littéraire...
 
 montre moi la table de 5,
 
