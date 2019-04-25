@@ -1,5 +1,6 @@
-from input import entree
 import écriture
+
+from input import entree
 
 
 
@@ -23,17 +24,35 @@ import écriture
 
 
 class main:
-    def main(self):
+    def entrance(self):
+        #on fractionne l'entrée
+        
         entrance = entree.entree(self)
         split = entree.split(self, entrance)
-        print(split)
+        return split
 
+    def pré_traitement(self, entrance):
+        #on récupere les print
+        #ex: affiche la affiche
+        #-> print() + 2 fois a la place 0 et 2
+        self.entrance = entrance
+
+        mot_clé = entree.recherche_mot_clé(self, self.entrance)
+        print(mot_clé)
+   
+
+
+
+
+
+    def écriture_de_la_fonction(self):
+        main.traitement_mot_clé(split)
         
         #noms de parametres
         c = main.parametre()
 
         a = main.corps_fonction()
-        b = main.traitement_mot_clé(split)
+
         parametres = main.parametrage(c, b[2])
 
         main.écriture_fonction(a[0])
@@ -52,7 +71,8 @@ if __name__ == "__main__":
 
 
     main = main()
-    main.main()
+    entrance = main.entrance()
+    main.pré_traitement(entrance)
 
     
 
