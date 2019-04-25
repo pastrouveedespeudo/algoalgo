@@ -5,8 +5,9 @@
 
 #affichage
 LISTE_AFFICHAGE = ['montre', 'affiche',]
-AFFICHAGE = {'debut':'print(', 'fin':')'}
+AFFICHAGE = {'debut':'print("', 'fin':'")'}
 MOT_INGNORE_AFFICHAGE = ['moi']
+AFFICHAGE_BOUCLE = [{'debut':'print( i *', 'fin':')'}]
 
 
 #construction boucle_for
@@ -23,7 +24,7 @@ BOUCLE_FOR = {'debut':'for i in range(', 'fin':'):'}
 #table de multiplication
 MOT_INGNORE_AFFICHAGE = ['la', 'de']
 LISTE_TABLE_MULITPLICATION = ['la table de multiplication de']
-TABLE_MULITPLICATION = [BOUCLE_FOR]
+TABLE_MULITPLICATION = [BOUCLE_FOR['debut'], BOUCLE_FOR['fin']]
 
 
 
@@ -34,7 +35,7 @@ TABLE_MULITPLICATION = [BOUCLE_FOR]
 
 
 #construction fonction
-FONCTION = {'debut':'', 'fin':''}
+FONCTION = {'debut':'def function(', 'fin':'):'}
 
 
 
