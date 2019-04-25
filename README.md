@@ -1,6 +1,7 @@
 # algoalgo
 
-j'aurai du continuer mes études littéraire...
+par conte y'a 60 pm a lyon c pas l'heure de pointe....
+
 
 montre moi la table de 5,
 
