@@ -1,8 +1,9 @@
 import écriture
+import importlib
 
 from input import entree
-
-
+from database import FONCTION
+from database import AFFICHAGE_BOUCLE
 
 
 
@@ -38,44 +39,63 @@ class main:
         self.entrance = entrance
 
         mot_clé = entree.recherche_mot_clé(self, self.entrance)
-        print(mot_clé)
-   
 
-
-
+        return mot_clé
 
 
     def écriture_de_la_fonction(self):
-        main.traitement_mot_clé(split)
+        entree.écriture_fonction(self, FONCTION['debut'])
+        entree.écriture_fonction(self, FONCTION['fin'])
         
-        #noms de parametres
-        c = main.parametre()
+    def écriture_corps_fonction(self, mot_clé):
+        self.mot_clé = mot_clé
 
-        a = main.corps_fonction()
+        multi = ""
+        affichage = ''
+        
+        for i in self.mot_clé:
+            for j in i:
+                if j == 'affichage':
+                    affichage = True
+                if j == 'multiplication':
+                    multi = True
+                    index = self.mot_clé.index(i)
+                    entree.écriture_ligne2(self, self.mot_clé[index][1][0])
+                    entree.écriture(self, 10)
+                    entree.écriture(self, self.mot_clé[index][1][1])
+                    
+                    if affichage == True:
+                        entree.écriture_ligne3_indentation(self, AFFICHAGE_BOUCLE[0]['debut'])
+                        entree.écriture(self, int(self.mot_clé[index][2][0]))
+                        entree.écriture(self, AFFICHAGE_BOUCLE[0]['fin'])
+                        entree.reload(self, écriture)
 
-        parametres = main.parametrage(c, b[2])
 
-        main.écriture_fonction(a[0])
-        main.écriture(parametres)
-        main.écriture_fonction(a[1])
-
-        main.écriture_l2(b[0][0])
-        main.écriture(parametres)
-        main.écriture(b[1])
-        main.écriture(b[0][1])
-
-        main.reload(écriture)
-        écriture.the_function() 
+        
+        for i in self.mot_clé:
+            for j in i:
+                if j == 'affichage' and multi == "":
+                    entree.écriture_ligne2(self, self.mot_clé[0][1][0])
+                    entree.écriture(self, self.mot_clé[0][3][1])
+                    entree.écriture(self, self.mot_clé[0][1][1])
+                    entree.reload(self, écriture)
 
 if __name__ == "__main__":
 
 
     main = main()
     entrance = main.entrance()
-    main.pré_traitement(entrance)
+    mot_clé = main.pré_traitement(entrance)
+    main.écriture_de_la_fonction()
+    main.écriture_corps_fonction(mot_clé)
 
+
+
+    try:
+        écriture.function()
+    except:
+        pass
     
-
 
     
 
