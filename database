@@ -1,12 +1,39 @@
+#variable int
+#variable str
+#variable liste
+#variable dictionnaire
 
 #affichage
 LISTE_AFFICHAGE = ['montre', 'affiche',]
 AFFICHAGE = {'debut':'print(', 'fin':')'}
-MOT_INGNORE = ['moi']
+MOT_INGNORE_AFFICHAGE = ['moi']
+
+
+#construction boucle_for
+BOUCLE_FOR = {'debut':'for i in range(', 'fin':'):'}
+##construction boucle_while
+
+
+#math
+#addition
+#soustraction
+#division
+#multiplication
+
+#table de multiplication
+MOT_INGNORE_AFFICHAGE = ['la', 'de']
+LISTE_TABLE_MULITPLICATION = ['la table de multiplication de']
+TABLE_MULITPLICATION = [BOUCLE_FOR]
+
+
+
+
+
+
+
 
 
 #construction fonction
-
 FONCTION = {'debut':'', 'fin':''}
 
 
