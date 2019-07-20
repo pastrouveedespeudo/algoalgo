@@ -3,10 +3,21 @@ import threading
 from CONFIG import PONCTUATION
 
 
+#NE surtout pas écrire les print faut des truks qui le fasse
+
 #un truk qui écrit du code
+
+#ca inclus de lui dire quels ont été les étapes
+#ca inclus de lui dire en détail les choses
+#ensuite y mettre le truk vocal
+
+
+#image cnn
+#traitement de la parole lstl
 
 
 GLOBAL = []
+
 
 def entree():
 
@@ -20,6 +31,15 @@ def entree():
     print("fais moi programme qui fait une table de mulitplication")
     print("corrige moi ce code stp")
     print("corrige moi ce texte stp")
+    print('de quelle couleur est un poussin ?')
+    print("Y a til du vert dans l'image ?")
+    print("rajoute l'heure qu'il est dans la table de multiplication")
+    print("qu'est ce qui différencie un chat d'un chien ?")
+    print("pourquoi pleut il ?")
+    print("résume moi ce texte")
+    print("créer moi un environement virtuel, et un site sous django")
+    print("le nombre de bouchons a crest")
+
 
     print("quand c'est les marchés de crest ?")
     print("fais moi une analyse de l'image, trouves tu 5 balles par terre ? utilise le satellite, direction crest stp")
@@ -90,6 +110,8 @@ th3.start()
 th1.join()
 th2.join()
 th3.join()
+
+
 
 print('SUITEEE')
 
