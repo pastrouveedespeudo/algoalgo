@@ -6,14 +6,18 @@ from bs4 import BeautifulSoup
 from CONFIG import PONCTUATION
 from CONFIG import PONCTUATION_ASSOCIATION
 from CONFIG import PONCTUATION_OUT
+from analyse_ponctuation_function import analyse_phrase
 
 
 #PARTIE VERBE
 from CONFIG import PATH_VERBE
 from CONFIG import PRONOM_PERSONNEL
 
+#PARTIE NOM
+from CONFIG import PATH_WIKIPEDIA
+from mot_cle_function import creation_par
 
-from analyse_ponctuation_function import analyse_phrase
+
 
 
 
@@ -37,9 +41,12 @@ GLOBAL = []
 
 def entree():
 
-
     print("qui a fait la joconde ? et le radeau de la méduse ?")
-    print('qui a fais la joconde ?')
+    print("qui a fait la joconde ?")
+    print('qui a fais et le radeau de la méduse ?')
+    print("qui est l'auteur de la joconde")
+    print("l'auteur de la joconde ?")
+    
     print('qui est mona lisa ?')
     print('qui est le plus beau ?')
     print("est ce que je suis bete ?")
@@ -100,10 +107,25 @@ def traitement_entree():
 
     entrance = entree()
     entrance = entrance.split()
-    
+
+    c = 0
     for i in entrance:
-        GLOBAL.append(i.lower())
+        mot = ""
         
+        for j in i.lower():
+
+            if j == "'":
+                mot += 'e'
+                GLOBAL.append(mot)
+                mot = ""
+                #On remplace l'auteur par le auteur
+
+
+            else:
+                mot += j
+  
+        GLOBAL.append(mot)  
+
 
 
 
@@ -113,7 +135,7 @@ def analyse_ponctuation():
     #ICI   Il va falloir savoir si continuité ou pas genre les virgules
 
     liste = analyse_phrase(GLOBAL, PONCTUATION)
-    
+
     for i in liste:
 
         for j in i:
@@ -123,6 +145,8 @@ def analyse_ponctuation():
 
     return liste
     #PREMIERE LISTE ICI   
+
+
 
 
 
@@ -143,7 +167,7 @@ def verbe():
         for i in propriete:
             for pronom in PRONOM_PERSONNEL:
                 recherche = str(i).find(str(pronom))
-                
+
                 if recherche >= 0:
                     liste_verbe.append([mot, pronom])
                     #on cherche je tu il nous vous ils
@@ -154,12 +178,19 @@ def verbe():
 
 
 
+
+
+
 def mot_cle():
     """les noms communs et combien par exemple ?"""
     #radeau de la méduse ?
     #mona lisa ?
-    pass
 
+    liste = analyse_phrase(GLOBAL, PONCTUATION)
+    liste1 = ["+".join(i) for i in liste]
+
+    creation = creation_par(liste1, liste, PATH_WIKIPEDIA)
+    return creation
 
 
 
