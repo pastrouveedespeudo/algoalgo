@@ -5,6 +5,8 @@ le jour faire les vidéo et les temps de pause faire ca, pcque pour l'image faud
 
 C:\Users\jeanbaptiste\Desktop\fourtout2\fourtout\open\pygame3.1\livrable
 
-bouaaaaaaaaa 
-
+par conte j'ai perdu le bot.... j'en avais tellement chié jtai pas tres bon, mtn faut que jpasse les exo de la battle dev sans réfléhir,
+que jmaitrise les reseaux, et que jfasse synergogo j'ai grave appris ! merci pour les plus gentil et pour les moins gentil    -   -
+                                                                                                                                -
+                                                                                                                                U
 mtn plateforme
