@@ -7,6 +7,8 @@ C:\Users\jeanbaptiste\Desktop\fourtout2\fourtout\open\pygame3.1\livrable
 
 par conte j'ai perdu le bot.... j'en avais tellement chié jtai pas tres bon, mtn faut que jpasse les exo de la battle dev sans réfléhir,
 que jmaitrise les reseaux, et que jfasse synergogo j'ai grave appris ! merci pour les plus gentil et pour les moins gentil    -   -
+                                                                                                                                <br>
                                                                                                                                 -
+                                                                                                                                <br>
                                                                                                                                 U
 mtn plateforme
